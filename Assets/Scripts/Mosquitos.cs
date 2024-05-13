@@ -6,15 +6,22 @@ using TMPro;
 
 public class Mosquitos : MonoBehaviour
 {
+    List<GameObject> mosquitosList = new List<GameObject>();
 
     public GameObject mosquitosPrefab;
-    //public GameObject mosquitosPrefab2;
+    public GameObject mosquitosPrefab2;
+    public GameObject mosquitosPrefab3;
+
     public Transform[] spawnPoints;
     public float gameTime = 0f;
     public TMP_Text gameText;
     
     void Start()
     {
+        mosquitosList.Add(mosquitosPrefab);
+        mosquitosList.Add(mosquitosPrefab2);
+        mosquitosList.Add(mosquitosPrefab3);
+
         Spawn();
     }
 
@@ -31,7 +38,9 @@ public class Mosquitos : MonoBehaviour
 
     public void Spawn()
     {
-        GameObject mosquito = Instantiate(mosquitosPrefab) as GameObject;
+        int prefabIndex = UnityEngine.Random.Range(0, 3);
+        GameObject mosquito = Instantiate(mosquitosList[prefabIndex]) as GameObject;
+
         mosquito.transform.position = spawnPoints[Random.Range(0, spawnPoints.Length)].transform.position;
     }
 }
