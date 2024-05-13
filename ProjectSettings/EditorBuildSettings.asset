@@ -5,7 +5,13 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/1Scene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d5d87cafb1498184a92168350508afad
+  - enabled: 1
+    path: Assets/Scenes/mosquitos.unity
+    guid: 06869d0c3ae0a3e418c97b0a2edbf4b0
   m_configObjects: {}
