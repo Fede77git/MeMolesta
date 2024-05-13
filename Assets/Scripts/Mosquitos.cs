@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
+
 
 public class Mosquitos : MonoBehaviour
 {
@@ -34,6 +36,12 @@ public class Mosquitos : MonoBehaviour
             gameTime = 0f;
         }
         gameText.text = gameTime.ToString();
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("mosquitos");
+
+        }
     }
 
     public void Spawn()
